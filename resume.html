@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jatin Nayak — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 48px;
+    }
+    @media print {
+      body { padding: 20px 32px; }
+      .no-print { display: none !important; }
+    }
+    .print-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: #6c5ce7; color: #fff;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 12px; font-size: 0.9rem; font-weight: 500; z-index: 100;
+    }
+    .print-bar button {
+      padding: 8px 24px; border-radius: 6px; border: 2px solid #fff;
+      background: #fff; color: #6c5ce7; font-weight: 700; font-size: 0.9rem;
+      cursor: pointer; font-family: inherit;
+    }
+    .print-bar button:hover { background: #f0eeff; }
+    .spacer { height: 48px; }
+
+    header { text-align: center; margin-bottom: 28px; border-bottom: 2px solid #1a1a2e; padding-bottom: 20px; }
+    h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .contact-line { font-size: 0.85rem; color: #444; }
+    .contact-line a { color: #6c5ce7; text-decoration: none; }
+
+    h2 {
+      font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 2px; color: #6c5ce7; margin: 24px 0 12px;
+      border-bottom: 1px solid #e0e0e0; padding-bottom: 6px;
+    }
+    p, li { font-size: 0.92rem; color: #333; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 4px; list-style: disc; }
+    .summary { margin-bottom: 4px; }
+
+    .edu-item, .project-item, .cert-item { margin-bottom: 14px; }
+    .edu-title, .project-title { font-weight: 700; font-size: 0.95rem; color: #1a1a2e; }
+    .edu-sub { font-size: 0.85rem; color: #666; }
+    .project-link { font-size: 0.82rem; color: #6c5ce7; text-decoration: none; }
+
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+    .skill-row { font-size: 0.9rem; }
+    .skill-row strong { color: #1a1a2e; }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print">
+    <span>📄 Save this page as PDF:</span>
+    <button onclick="window.print()">⬇ Download as PDF</button>
+  </div>
+  <div class="spacer no-print"></div>
+
+  <header>
+    <h1>JATIN NAYAK</h1>
+    <div class="contact-line">
+      <a href="https://linkedin.com/in/jatin-nayak">LinkedIn: jatin-nayak</a> |
+      <a href="https://github.com/jatin26003">GitHub: jatin26003</a> |
+      +91 62320 64481 |
+      <a href="mailto:jatinnayak369@email.com">jatinnayak369@email.com</a>
+    </div>
+  </header>
+
+  <h2>Summary</h2>
+  <p class="summary">
+    Detail-oriented final year B.Tech CSE student with a focus on AI/ML and strong Python skills,
+    seeking an internship to apply academic knowledge to real-world projects, contribute to innovative solutions,
+    and gain practical industry experience in AI/ML and software development.
+  </p>
+
+  <h2>Education</h2>
+  <div class="edu-item">
+    <div class="edu-title">Bachelor of Technology — Computer Science Engineering</div>
+    <div class="edu-sub">IPS College affiliated to RGPV, Indore</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-title">Higher Secondary (12th)</div>
+    <div class="edu-sub">The Omni School, Indore | 2023</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-title">High School (10th)</div>
+    <div class="edu-sub">The Omni School, Indore | 2021</div>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-row"><strong>General:</strong> Python, Django, Flask, FastAPI, Bootstrap 5, Tailwind CSS, GitHub</div>
+    <div class="skill-row"><strong>Languages:</strong> Python, C++, JavaScript (ES6+), HTML5/CSS3</div>
+    <div class="skill-row"><strong>AI/ML:</strong> NLP, Speech Recognition, Algorithms & Data Structures</div>
+    <div class="skill-row"><strong>Tools & DB:</strong> Bootstrap 5, Tailwind CSS, Web Speech API, MySQL, MongoDB</div>
+  </div>
+
+  <h2>Academic Projects</h2>
+  <div class="project-item">
+    <div class="project-title">Voice Assistant</div>
+    <p>Created a Python-based voice assistant capable of responding to commands and performing basic tasks using speech recognition and text-to-speech.</p>
+    <a class="project-link" href="https://github.com/jatin26003/Q-SKILL/tree/main/voice_assistant">github.com/jatin26003/Q-SKILL/.../voice_assistant</a>
+  </div>
+  <div class="project-item">
+    <div class="project-title">Sentiment Analysis</div>
+    <p>Developed a Python-based Sentiment Analysis system using NLP and machine learning to analyze and classify textual data.</p>
+    <a class="project-link" href="https://github.com/jatin26003/Q-SKILL/tree/main/sentiment_analysis_app">github.com/jatin26003/Q-SKILL/.../sentiment_analysis_app</a>
+  </div>
+  <div class="project-item">
+    <div class="project-title">Matrix Operation Tools</div>
+    <p>Implemented matrix operations in Python using NumPy for efficient linear algebra computations and data manipulation.</p>
+    <a class="project-link" href="https://github.com/jatin26003/Q-SKILL/tree/main/matrix_operations_tool">github.com/jatin26003/Q-SKILL/.../matrix_operations_tool</a>
+  </div>
+
+  <h2>Certifications</h2>
+  <div class="cert-item">
+    <div class="edu-title">Innovating with Google Cloud AI</div>
+    <div class="edu-sub">Simplilearn — December 2025</div>
+  </div>
+  <div class="cert-item">
+    <div class="edu-title">AI Principal & Systems LaunchPad Program</div>
+    <div class="edu-sub">EDGE 3 — December 2025 – March 2026</div>
+  </div>
+
+</body>
+</html>
