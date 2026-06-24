@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Contact Form Handling =====
   const contactForm = document.getElementById('contact-form');
 
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
 
     const submitBtn = this.querySelector('.btn-submit');
@@ -411,25 +411,48 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     submitBtn.disabled = true;
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const formData = new FormData(this);
+      
+      const response = await fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        submitBtn.innerHTML = `
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Message Sent!
+        `;
+        submitBtn.style.background = 'linear-gradient(135deg, #00b894, #00cec9)';
+        contactForm.reset();
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
       submitBtn.innerHTML = `
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="20 6 9 17 4 12"/>
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
-        Message Sent!
+        Failed to Send
       `;
-      submitBtn.style.background = 'linear-gradient(135deg, #00b894, #00cec9)';
+      submitBtn.style.background = 'linear-gradient(135deg, #d63031, #ff7675)';
+    }
 
-      // Reset after 3s
-      setTimeout(() => {
-        submitBtn.innerHTML = originalContent;
-        submitBtn.style.background = '';
-        submitBtn.disabled = false;
-        contactForm.reset();
-        lucide.createIcons();
-      }, 3000);
-    }, 1500);
+    // Reset after 3s
+    setTimeout(() => {
+      submitBtn.innerHTML = originalContent;
+      submitBtn.style.background = '';
+      submitBtn.disabled = false;
+      lucide.createIcons();
+    }, 3000);
   });
 
   // ===== Magnetic Button Effect (for primary buttons) =====
