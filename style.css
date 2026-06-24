@@ -1221,7 +1221,6 @@ body.light-mode .cursor-blink {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   transition: var(--transition-smooth);
-  group: project;
 }
 
 .project-card:hover {
