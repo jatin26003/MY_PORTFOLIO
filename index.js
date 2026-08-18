@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursorRing = document.getElementById('cursor-ring');
   
   if (customCursor && cursorRing && !('ontouchstart' in window)) {
-    body.classList.add('custom-cursor-enabled');
+    document.body.classList.add('custom-cursor-enabled');
     
     let mouseX = 0;
     let mouseY = 0;

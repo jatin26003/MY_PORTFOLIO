@@ -1575,6 +1575,11 @@ body.light-mode .cursor-blink {
   background: rgba(253, 203, 110, 0.12);
 }
 
+.cert-card:nth-child(3) .cert-icon {
+  color: var(--accent-green);
+  background: rgba(0, 184, 148, 0.12);
+}
+
 .cert-title {
   font-size: 1.15rem;
   font-weight: 700;
